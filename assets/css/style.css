@@ -312,6 +312,10 @@ html {
     width: 90px;
 }
 
+.header__mobile-search-ck:checked ~ .header__search {
+    display: flex;
+}
+
 .header__search {
     flex: 1;
     background-color: #fff;
@@ -365,6 +369,7 @@ html {
     padding: 0;
     box-shadow: 0px 0px 1px black;
     display: none;
+    z-index: 2;
 }
 
 .header__search-item:hover {
@@ -647,6 +652,70 @@ html {
 
 .header__search-icon {
     font-size: 1.4rem;
+}
+
+.header-sort-bar {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+}
+
+.header-sort-item {    
+    flex: 1;
+    text-align: center;
+}
+
+.header-sort-link {    
+    position: relative;
+    text-decoration: none;
+    display: block;
+    font-size: 1.4rem;
+    color: black;
+    height: 100%;
+    line-height: 40px;
+}
+
+.header-sort-link::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    left: 0;
+    border-left: 1px solid #e5e5e5;
+}
+
+.header-sort-item:first-child .header-sort-link::after {
+    display: none;
+}
+
+.header-sort-link-active {
+    color: var(--color-main);
+}
+
+.mobile-anima {
+    display: flex;
+}
+
+.mobile-anima-item {
+
+}
+
+.mobile-anima-icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 15px;
 }
 
 /* MODAL SIGNIN SIGNUP */
@@ -951,6 +1020,7 @@ html {
     box-shadow: 0 0 4px rgb(180, 180, 180);
     border-radius: 2px;
     display: none;
+    z-index: 2;
 }
 
 .filter-pri-list a {

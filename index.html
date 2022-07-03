@@ -9,13 +9,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/responsive.css">
+        <link rel="stylesheet" href="../assets/css/grid.css">
+        
     </head>
 
     <body>
         <div class="main">
             <header class="header">
-                <div class="grid">
-                    <nav class="header__nav">
+                <div class="grid wide">
+                    <nav class="header__nav hide-on-mobile-tablet">
                         <ul class="header__nav-list">
                             <li class="header__nav-item header__nav-hover-qr header__nav-item--site">
                                 Tải ứng dụng Shopow
@@ -23,10 +26,10 @@
                                     <img src="../assets/img/qr-download.png" alt="QR-Download" class="header__qr--img">
                                     <div class="header__qr-app">
                                         <div class="header__qr-link">
-                                            <img src="./assets/img/ggplay.png" alt="GG-Play" class="header__qr-app--img">
+                                            <img src="../assets/img/ggplay.png" alt="GG-Play" class="header__qr-app--img">
                                         </div>
                                         <div class="header__qr-link">
-                                            <img src="./assets/img/appstore.png" alt="App-Store" class="header__qr-app--img">
+                                            <img src="../assets/img/appstore.png" alt="App-Store" class="header__qr-app--img">
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +53,7 @@
                                         <ul class="header__noti-list">                                            
                                             <li class="header__noti-item">
                                                 <a href="#" class="header__noti-link">
-                                                    <img src="./assets/img/sanpham/dell.jpg" alt="Dell" class="header__noti-img">
+                                                    <img src="../assets/img/sanpham/dell.jpg" alt="Dell" class="header__noti-img">
                                                     <div class="header__noti-info">
                                                         <div class="header__noti-name">Laptop Dell chính hãng</div>
                                                         <div class="header__noti-about">Mô tả laptop Dell chính hãng</div>
@@ -59,7 +62,7 @@
                                             </li>
                                             <li class="header__noti-item">
                                                 <a href="#" class="header__noti-link">
-                                                    <img src="./assets/img/sanpham/asus.jpg" alt="Asus" class="header__noti-img">
+                                                    <img src="../assets/img/sanpham/asus.jpg" alt="Asus" class="header__noti-img">
                                                     <div class="header__noti-info">
                                                         <div class="header__noti-name">Laptop Asus chính hãng</div>
                                                         <div class="header__noti-about">Mô tả laptop Asus chính hãng</div>
@@ -68,7 +71,7 @@
                                             </li>
                                             <li class="header__noti-item">
                                                 <a href="#" class="header__noti-link">
-                                                    <img src="./assets/img/sanpham/legion.jpg" alt="Legion" class="header__noti-img">
+                                                    <img src="../assets/img/sanpham/legion.jpg" alt="Legion" class="header__noti-img">
                                                     <div class="header__noti-info">
                                                         <div class="header__noti-name">Laptop Lenovo chính hãng</div>
                                                         <div class="header__noti-about">Mô tả laptop Lenovo chính hãng</div>
@@ -98,9 +101,21 @@
                     </nav>
 
                     <div class="header__last">
-                        <div class="header__logo">
-                            <a href="#"><img src="./assets/img/logo/pow.png" alt="Logo Shopow" class="header__img"></a>
+                        <div class="mobile-anima">
+                            <label for="mobile-menu-checkbox" class="mobile-anima-item">                                
+                                <i class="mobile-anima-icon fa-solid fa-bars"></i>                                
+                            </label>  
+
+                            <label for="mobile-search-checkbox" class="mobile-anima-item">                                
+                                <i class="mobile-anima-icon fa-solid fa-magnifying-glass"></i>                            
+                            </label>
                         </div>
+
+                        <div class="header__logo">
+                            <a href="#"><img src="../assets/img/logo/pow.png" alt="Logo Shopow" class="header__img"></a>
+                        </div>
+
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header__mobile-search-ck">
 
                         <div class="header__search">
                             <div class="header__search-cover">
@@ -143,14 +158,14 @@
                             <div class="header__cart-container">
                                 <!-- header__cart-no-cart -->
                                 <div class="headercart header__cart-no-cart">
-                                    <img src="./assets/img/no-cart.png" alt="Sản phẩm" class="header__cart-no-cart-img">
+                                    <img src="../assets/img/no-cart.png" alt="Sản phẩm" class="header__cart-no-cart-img">
                                     <h3  class="header__cart-no-cart-hh">Chưa có sản phẩm</h3>
 
                                     <!-- <h2 class="header__cart-heading">Sản phẩm đã thêm</h2>                                    
                                     
                                         <ul class="header__cart-have-list">
                                             <li class="header__cart-have-container">
-                                                <img src="./assets/img/sanpham/legion.jpg" alt="Legion"  class="header__cart-have-img">
+                                                <img src="../assets/img/sanpham/legion.jpg" alt="Legion"  class="header__cart-have-img">
                                                 <div class="header__cart-have-item">
                                                     <div class="header__cart-have-item-firt">
                                                         <h5 class="header__cart-have-item-name">Laptop Legion 5</h5>
@@ -167,7 +182,7 @@
                                                 </div>
                                             </li>
                                             <li class="header__cart-have-container">
-                                                <img src="./assets/img/sanpham/dell.jpg" alt="Dell"  class="header__cart-have-img">
+                                                <img src="../assets/img/sanpham/dell.jpg" alt="Dell"  class="header__cart-have-img">
                                                 <div class="header__cart-have-item">
                                                     <div class="header__cart-have-item-firt">
                                                         <h5 class="header__cart-have-item-name">Laptop Dell</h5>
@@ -191,12 +206,26 @@
                         </div>
                     </div>
                 </div>
+                <ul class="header-sort-bar">
+                    <li class="header-sort-item">
+                        <a href="#" class="header-sort-link header-sort-link-active">Phổ biến</a>
+                    </li>
+                    <li class="header-sort-item">
+                        <a href="#" class="header-sort-link">Mới nhất</a>
+                    </li>
+                    <li class="header-sort-item">
+                        <a href="#" class="header-sort-link">Bán chạy</a>
+                    </li>
+                    <li class="header-sort-item">
+                        <a href="#" class="header-sort-link">Giá</a>
+                    </li>
+                </ul>
             </header>
 
             <div class="container">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="grid__row nav-cont">
-                        <div class="grid__column-2">
+                        <div class="col l-2 m-0 c-0">
                             <div class="category">
                                 <h3 class="category__heading">
                                     <i class="category__heading-icon fa-solid fa-list"></i>Danh mục
@@ -231,8 +260,8 @@
                             </div>
                         </div>
     
-                        <div class="grid__column-10">
-                            <div class="filter">
+                        <div class="col l-10 m-12 c-12">
+                            <div class="filter hide-on-mobile-tablet">
                                 <span class="filter-label">Sắp xếp theo</span>
                                 <button class="btn-filter btn-filter-active">Phổ biến</button>
                                 <button class="btn-filter">Mới nhất</button>
@@ -276,7 +305,7 @@
                                                             <span class="product-action-vote product-action-voted"><i class="fa-solid fa-star"></i></span>
                                                             <span class="product-action-vote product-action-voted"><i class="fa-solid fa-star"></i></span>
                                                         </div>    
-                                                        <span class="product-sold">Đã bán 12</span>
+                                                        
                                                     </div>
                                                     <!-- product-action-liked -->
                                                     <span class="product-action-like">
@@ -461,7 +490,7 @@
                                                         <span class="product-action-vote product-action-voted"><i class="fa-solid fa-star"></i></span>
                                                         <span class="product-action-vote product-action-voted"><i class="fa-solid fa-star"></i></span>
                                                     </div>    
-                                                    <span class="product-sold">Đã bán 12</span>
+                                                    
                                                 </div>
                                                 <!-- product-action-liked -->
                                                 <span class="product-action-like">
@@ -646,7 +675,7 @@
                                                         <span class="product-action-vote product-action-voted"><i class="fa-solid fa-star"></i></span>
                                                         <span class="product-action-vote product-action-voted"><i class="fa-solid fa-star"></i></span>
                                                     </div>    
-                                                    <span class="product-sold">Đã bán 12</span>
+                                                    
                                                 </div>
                                                 <!-- product-action-liked -->
                                                 <span class="product-action-like">
@@ -855,7 +884,7 @@
             </div>
 
             <footer class="footer">
-                <div class="grid grid-footer">
+                <div class="grid wide grid-footer">
                     <div class="grid__row">
                         <div class="grid__column-2-4">
                             <h3 class="footer-heding">CHĂM SÓC KHÁCH HÀNG</h3>
@@ -915,10 +944,10 @@
                         <div class="grid__column-2-4">
                             <h3 class="footer-heding">THANH TOÁN</h3>
                             <div class="footer-pay-con">
-                                <img src="./assets/img/thanhtoan/visa.png" alt="Visa" class="footer-pay-img">
-                                <img src="./assets/img/thanhtoan/mtc.png" alt="Mastercard" class="footer-pay-img">
-                                <img src="./assets/img/thanhtoan/jcb.png" alt="JCB" class="footer-pay-img">
-                                <img src="./assets/img/thanhtoan/hcr.png" alt="Homecredit" class="footer-pay-img">
+                                <img src="../assets/img/thanhtoan/visa.png" alt="Visa" class="footer-pay-img">
+                                <img src="../assets/img/thanhtoan/mtc.png" alt="Mastercard" class="footer-pay-img">
+                                <img src="../assets/img/thanhtoan/jcb.png" alt="JCB" class="footer-pay-img">
+                                <img src="../assets/img/thanhtoan/hcr.png" alt="Homecredit" class="footer-pay-img">
                             </div>
                         </div>
                         <div class="grid__column-2-4">
@@ -948,17 +977,17 @@
                             <h3 class="footer-heding">TẢI ỨNG DỤNG SHOPEE</h3>
                             <div class="footer-qr-last">    
                                 <a href="#">                            
-                                    <img src="./assets/img/qr-download.png" alt="QR" class="footer-qr-img">
+                                    <img src="../assets/img/qr-download.png" alt="QR" class="footer-qr-img">
                                 </a>
                                 <div class="footer-qr-last-store">
                                     <a href="#">
-                                        <img src="./assets/img/appstore.png" alt="AppStore" class="footer-qr-item-img">    
+                                        <img src="../assets/img/appstore.png" alt="AppStore" class="footer-qr-item-img">    
                                     </a>                                    
                                     <a href="#">
-                                        <img src="./assets/img/ggplay.png" alt="GgPlay" class="footer-qr-item-img">
+                                        <img src="../assets/img/ggplay.png" alt="GgPlay" class="footer-qr-item-img">
                                     </a>
                                     <a href="#">
-                                        <img src="./assets/img/appgarre.png" alt="AppGalle" class="footer-qr-item-img">                                            
+                                        <img src="../assets/img/appgarre.png" alt="AppGalle" class="footer-qr-item-img">                                            
                                     </a>
                                 </div>
                             </div>                            
